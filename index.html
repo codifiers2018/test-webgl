@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | AvoidObstacles</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=1080 height=2340 style="width: 1080px; height: 2340px; background: #231F20"></canvas>
+    <script src="Build/PatchedBuild.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/PatchedBuild.data.gz",
+        frameworkUrl: "Build/PatchedBuild.framework.js.gz",
+        codeUrl: "Build/PatchedBuild.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DiiBoxx",
+        productName: "AvoidObstacles",
+        productVersion: "0.1",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
